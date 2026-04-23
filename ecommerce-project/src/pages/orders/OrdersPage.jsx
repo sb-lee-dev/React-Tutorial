@@ -1,8 +1,8 @@
 import axios from "axios";
 import dayjs from "dayjs";
 import { useState, useEffect } from "react";
-import { Header } from "../components/Header";
-import { formatMoney } from "../utils/money";
+import { Header } from "../../components/Header";
+import { formatMoney } from "../../utils/money";
 import "./OrdersPage.css";
 import { Fragment } from "react";
 
