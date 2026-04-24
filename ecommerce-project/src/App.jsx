@@ -8,6 +8,7 @@ import { OrdersPage } from "./pages/orders/OrdersPage";
 import { TrackingPage } from "./pages/tracking/TrackingPage";
 
 function App() {
+  window.axios = axios;
   const [cart, setCart] = useState([]);
 
   const loadCart = async () => {
@@ -26,7 +27,10 @@ function App() {
         path="checkout"
         element={<CheckoutPage cart={cart} loadCart={loadCart} />}
       />
-      <Route path="orders" element={<OrdersPage cart={cart} />} />
+      <Route
+        path="orders"
+        element={<OrdersPage cart={cart} loadCart={loadCart} />}
+      />
       <Route path="tracking" element={<TrackingPage />} />
     </Routes>
   );
